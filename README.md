@@ -1,10 +1,10 @@
-##🌍 Live Demo
+## 🌍 Live Demo
 
 🔗 App: https://securenotes-kmpl.onrender.com
 
 🔗 Repository: https://github.com/jopaulkjoshy14/SecureNotes
 
-##🚀 Features
+## 🚀 Features
 
 🔒 Client-side encryption (AES-GCM via Web Crypto API)
 
@@ -20,7 +20,7 @@
 
 🛡 Clean separation of crypto, storage, and UI logic
 
-##📁 Project Structure
+## 📁 Project Structure
 SecureNotes/
 │
 ├── index.html            # Login page
@@ -37,7 +37,7 @@ SecureNotes/
 │
 └── assets/               # (Optional) images/icons
 
-##🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 HTML5
 
@@ -49,7 +49,7 @@ Web Crypto API
 
 LocalStorage API
 
-##🔐 Encryption Details
+## 🔐 Encryption Details
 
 SecureNotes ensures maximum privacy using modern cryptographic standards:
 
@@ -61,12 +61,12 @@ Random salt generation for every key derivation
 
 Random IV for each encryption
 
-##Encrypted blobs stored inside LocalStorage
+## Encrypted blobs stored inside LocalStorage
 
 ➡️ No data is ever transmitted to any server.
 ➡️ Your browser is the ONLY place where decryption happens.
 
-##📦 Installation & Usage
+## 📦 Installation & Usage
 Option 1 — Clone via GitHub
 git clone https://github.com/jopaulkjoshy14/SecureNotes.git
 cd SecureNotes
@@ -89,10 +89,10 @@ http://localhost:3000/
 
 Option 3 — Use the Live Hosted Version
 
-##Use the Render deployment here:
+## Use the Render deployment here:
 👉 https://securenotes-kmpl.onrender.com
 
-##📸 Screenshots (Optional)
+## 📸 Screenshots (Optional)
 
 Add screenshots here for better presentation.
 
@@ -101,7 +101,7 @@ Example:
 ![Login Page](assets/login.png)
 ![Notes UI](assets/notes.png)
 
-##🚀 Deployment (Render)
+## 🚀 Deployment (Render)
 
 This project requires no backend, so deployment is simple:
 
@@ -111,7 +111,7 @@ Publish Directory: / (root folder)
 
 Render serves static sites directly from the repo.
 
-##🧭 Roadmap
+## 🧭 Roadmap
 
  Dark mode UI
 
@@ -123,12 +123,12 @@ Render serves static sites directly from the repo.
 
  Optional biometric support (WebAuthn)
 
-##📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
 You are free to use, modify, and distribute the software with attribution.
 
-##👤 Author
+## 👤 Author
 
 Jopaul K Joshy
 🔗 LinkedIn: https://www.linkedin.com/in/jopaul-k-joshy-75a7a6299/
