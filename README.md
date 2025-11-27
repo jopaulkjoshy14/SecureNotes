@@ -1,3 +1,43 @@
+# 🔐 SecureNotes
+
+SecureNotes is a lightweight, privacy-focused notes application that runs entirely in the browser.  
+All notes are **encrypted client-side** using the Web Crypto API, ensuring that your data never leaves your device.
+
+Perfect for secure personal note-taking, journaling, or storing sensitive information without relying on any server.
+
+---
+
+## 🚀 Features
+
+- 🔒 **Client-side encryption** (AES-GCM via Web Crypto API)
+- 🔑 **Password-protected login**
+- 📝 **Create, edit, delete notes securely**
+- 💾 **Encrypted LocalStorage persistence**
+- 🌐 **Fully offline – works without internet**
+- 🧩 **No backend required – pure HTML/CSS/JS**
+- 🛡 **Clean separation of crypto, storage, and UI logic**
+
+---
+
+## 📁 Project Structure
+
+SecureNotes/
+│
+├── index.html # Login page
+├── notes.html # Notes UI
+│
+├── css/
+│ └── styles.css
+│
+├── js/
+  ├── crypto.js # Encryption/decryption logic
+  ├── storage.js # Secure LocalStorage management
+  ├── login.js # Handles login + password flow
+  └── notes.js # Notes creation/edit/delete
+
+
+yaml
+Copy code
 
 ---
 
