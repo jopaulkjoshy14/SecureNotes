@@ -1,0 +1,83 @@
+body {  
+    font-family: system-ui, Segoe UI, Roboto, Arial;  
+    margin: 0;  
+    background: #f4f6f8;  
+    color: #111;  
+  }  
+  header {  
+    background: #0b5cff;  
+    color: #fff;  
+    padding: 12px 16px;  
+    font-size: 18px;  
+  }  
+  .container {  
+    padding: 12px;  
+    max-width: 900px;  
+    margin: 0 auto;  
+  }  
+  .card {  
+    background: #fff;  
+    padding: 12px;  
+    border-radius: 8px;  
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);  
+    margin-bottom: 12px;  
+  }  
+  .row {  
+    display: flex;  
+    gap: 8px;  
+    align-items: center;  
+  }  
+  input, textarea, button, select {  
+    font-size: 15px;  
+  }  
+  input, textarea, select {  
+    width: 100%;  
+    padding: 8px;  
+    border: 1px solid #ddd;  
+    border-radius: 6px;  
+  }  
+  textarea {  
+    min-height: 120px;  
+    resize: vertical;  
+  }  
+  .note {  
+    padding: 10px;  
+    border-radius: 6px;  
+    border: 1px solid #eee;  
+    margin-bottom: 8px;  
+  }  
+  .note-title {  
+    font-weight: 600;  
+  }  
+  footer {  
+    font-size: 13px;  
+    color: #666;  
+    margin-top: 18px;  
+    text-align: center;  
+  }  
+  .btn {  
+    background: #0b5cff;  
+    color: #fff;  
+    border: none;  
+    padding: 8px 12px;  
+    border-radius: 6px;  
+    cursor: pointer;  
+  }  
+  .btn.secondary {  
+    background: #e6eefc;  
+    color: #0b5cff;  
+  }  
+  .small {  
+    font-size: 13px;  
+    color: #666;  
+  }  
+  .actions {  
+    display: flex;  
+    gap: 6px;  
+  }  
+  .lock {  
+    float: right;  
+  }  
+  .hidden {  
+    display: none;  
+  }
