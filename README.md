@@ -113,15 +113,9 @@ Render serves static sites directly from the repo.
 
 ## 🧭 Roadmap
 
- Dark mode UI
-
  Export/Import encrypted notes
 
  Search inside notes
-
- PWA support (Installable app)
-
- Optional biometric support (WebAuthn)
 
 ## 📄 License
 
