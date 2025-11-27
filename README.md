@@ -68,7 +68,7 @@ Encrypted blobs stored inside LocalStorage
 
 📦 Installation & Usage
 Option 1 — Clone via GitHub
-git clone https://github.com/your-username/SecureNotes.git
+git clone https://github.com/jopaulkjoshy14/SecureNotes.git
 cd SecureNotes
 
 
