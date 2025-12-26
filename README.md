@@ -1,129 +1,93 @@
+# 🔐 SecureNotes
+
+SecureNotes is a privacy-focused notes application that uses **client-side encryption** to protect user data.  
+All notes are encrypted in the browser before being stored, ensuring that sensitive data never leaves the client unencrypted.
+
+---
+
 ## 🌍 Live Demo
 
-🔗 App: https://securenotes-kmpl.onrender.com
+🔗 App: https://securenotes-kmpl.onrender.com  
+🔗 Repository: https://github.com/jopaulkjoshy14/SecureNotes  
 
-🔗 Repository: https://github.com/jopaulkjoshy14/SecureNotes
+---
 
 ## 🚀 Features
 
-🔒 Client-side encryption (AES-GCM via Web Crypto API)
+- 🔒 Client-side encryption using **AES-GCM** via the Web Crypto API  
+- 🔑 Password-based access (encryption key derived from user password)  
+- 📝 Create, edit, and delete notes securely  
+- 💾 Encrypted persistence using LocalStorage  
+- 🌐 Fully offline-capable (works without internet after loading)  
+- 🧩 No backend required — pure HTML, CSS, and JavaScript  
+- 🛡 Clean separation of cryptography, storage, and UI logic  
 
-🔑 Password-protected login
-
-📝 Create, edit, delete notes securely
-
-💾 Encrypted LocalStorage persistence
-
-🌐 Fully offline – works without internet
-
-🧩 No backend required – pure HTML/CSS/JS
-
-🛡 Clean separation of crypto, storage, and UI logic
+---
 
 ## 📁 Project Structure
+
 SecureNotes/
 │
-├── index.html            # Login page
-├── notes.html            # Notes UI page
+├── index.html        # Login page
+├── notes.html        # Notes interface
 │
 ├── css/
-│   └── styles.css        # UI styling
+│ 
+└── styles.css        # UI styling
 │
 ├── js/
-│   ├── crypto.js         # Encryption/decryption logic
-│   ├── storage.js        # LocalStorage management
-│   ├── login.js          # Handles login/password flow
-│   └── notes.js          # Notes creation/edit/delete logic
-│
-└── assets/               # (Optional) images/icons
+│  
+├── crypto.js         # Encryption & decryption logic
+│  
+├── storage.js        # Encrypted LocalStorage handling
+│  
+├── login.js          # Password handling & key derivation 
+│   
+└── notes.js          # Notes CRUD functionality 
+│ 
+└── assets/               # Images / icons
+
+---
 
 ## 🛠️ Tech Stack
 
-HTML5
+- HTML5  
+- CSS3  
+- Vanilla JavaScript (ES6)  
+- Web Crypto API  
+- LocalStorage API  
 
-CSS3
-
-Vanilla JavaScript (ES6)
-
-Web Crypto API
-
-LocalStorage API
+---
 
 ## 🔐 Encryption Details
 
-SecureNotes ensures maximum privacy using modern cryptographic standards:
+SecureNotes uses modern browser cryptography features to protect data:
 
-PBKDF2 — Secure key derivation from password
+- **PBKDF2** for deriving encryption keys from the user password  
+- **AES-GCM (256-bit)** for authenticated encryption  
+- Random salt for each key derivation  
+- Random IV for every encryption operation  
 
-AES-GCM (256-bit) — Authenticated encryption
+> All encryption and decryption happens locally in the browser.
 
-Random salt generation for every key derivation
+---
 
-Random IV for each encryption
+## 🚀 Deployment
 
-## Encrypted blobs stored inside LocalStorage
+This is a static web application with no backend.
 
-➡️ No data is ever transmitted to any server.
-➡️ Your browser is the ONLY place where decryption happens.
+- Hosted on **Render**
+- No build step required
+- Render serves the app directly from the repository root
 
-## 📦 Installation & Usage
-Option 1 — Clone via GitHub
-git clone https://github.com/jopaulkjoshy14/SecureNotes.git
-cd SecureNotes
-
-
-Open index.html in your browser.
-
-Option 2 — Host Locally
-
-Use any local HTTP server:
-
-npx serve
-# or
-python3 -m http.server
-
-
-Then open:
-
-http://localhost:3000/
-
-Option 3 — Use the Live Hosted Version
-
-## Use the Render deployment here:
+Live URL:  
 👉 https://securenotes-kmpl.onrender.com
 
-## 📸 Screenshots (Optional)
+---
 
-Add screenshots here for better presentation.
+## 📸 Screenshots
 
 Example:
 
 ![Login Page](assets/login.png)
-![Notes UI](assets/notes.png)
-
-## 🚀 Deployment (Render)
-
-This project requires no backend, so deployment is simple:
-
-Build Command: None
-
-Publish Directory: / (root folder)
-
-Render serves static sites directly from the repo.
-
-## 🧭 Roadmap
-
- Export/Import encrypted notes
-
- Search inside notes
-
-## 📄 License
-
-This project is licensed under the MIT License.
-You are free to use, modify, and distribute the software with attribution.
-
-## 👤 Author
-
-Jopaul K Joshy
-🔗 LinkedIn: https://www.linkedin.com/in/jopaul-k-joshy-75a7a6299/
-🔗 Portfolio: your link
+![Notes Interface](assets/notes.png)
