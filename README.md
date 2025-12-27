@@ -1,114 +1,57 @@
-# 🔐 SecureNotes
+# SecureNotes
 
-SecureNotes is a privacy-focused notes application that uses **client-side encryption** to protect user data.  
-All notes are encrypted in the browser before being stored, ensuring that sensitive data never leaves the client unencrypted.
+A privacy-focused notes application built to practice client-side encryption, secure data handling, and clean frontend architecture using modern browser APIs.
 
----
-
-## 🌍 Live Demo
-
-🔗 App: https://securenotes-kmpl.onrender.com  
-🔗 Repository: https://github.com/jopaulkjoshy14/SecureNotes  
+This project focuses on encrypting user data in the browser, separating cryptographic logic from UI code, and building an offline-capable application without a backend.
 
 ---
 
-## 🚀 Features
-
-- 🔒 Client-side encryption using **AES-GCM** via the Web Crypto API  
-- 🔑 Password-based access (encryption key derived from user password)  
-- 📝 Create, edit, and delete notes securely  
-- 💾 Encrypted persistence using LocalStorage  
-- 🌐 Fully offline-capable (works without internet after loading)  
-- 🧩 No backend required — pure HTML, CSS, and JavaScript  
-- 🛡 Clean separation of cryptography, storage, and UI logic  
-
----
-
-## 📁 Project Structure
-
-SecureNotes/ 
-│ 
-├── index.html
-├── notes.html    
-│ 
-├── css/ 
-│   
-└── styles.css     
-│ 
-├── js/ 
-│   
-├── crypto.js   
-│   
-├── storage.js      
-│   
-├── login.js        
-│   
-└── notes.js         
-│ 
-└── assets/   
+## 🌐 Live Demo
+https://securenotes-kmpl.onrender.com
 
 ---
 
 ## 🛠️ Tech Stack
 
-- HTML5  
-- CSS3  
-- Vanilla JavaScript (ES6)  
-- Web Crypto API  
-- LocalStorage API  
+### Frontend
+- HTML5
+- CSS3 (custom styling, responsive layout)
+- Vanilla JavaScript (ES6)
+
+### Browser APIs
+- Web Crypto API (AES-GCM, PBKDF2)
+- LocalStorage API
 
 ---
 
-## 🔐 Encryption Details
+## ✨ Features
 
-SecureNotes uses modern browser cryptography features to protect data:
-
-- **PBKDF2** for deriving encryption keys from the user password  
-- **AES-GCM (256-bit)** for authenticated encryption  
-- Random salt for each key derivation  
-- Random IV for every encryption operation  
-
-> All encryption and decryption happens locally in the browser.
+- Client-side encryption using modern cryptography standards
+- Password-based access with key derivation
+- Create, edit, and delete encrypted notes
+- Encrypted persistence using LocalStorage
+- Fully offline-capable after initial load
+- No backend required
 
 ---
 
-## 🚀 Deployment
+## 📂 Project Purpose
 
-This is a static web application with no backend.
-
-- Hosted on **Render**
-- No build step required
-- Render serves the app directly from the repository root
-
-Live URL:  
-👉 https://securenotes-kmpl.onrender.com
+This project was built to:
+- Learn and apply client-side encryption concepts
+- Understand secure data handling in web applications
+- Practice structuring frontend code for maintainability
+- Explore browser-native cryptography APIs
 
 ---
 
-## 📸 Screenshots
+## 📌 Future Improvements
 
-![Login Page](assets/login.png)
-![Notes Interface](assets/notes.png)
-
----
-
-## 🧭 Roadmap
-
-Export / Import encrypted notes
-Search functionality inside notes
-UI and accessibility improvements
+- Export and import encrypted notes
+- Add search functionality
+- Improve UI accessibility and polish
+- Strengthen password handling and error feedback
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-You are free to use, modify, and distribute it with attribution.
-
----
-
-## 👤 Author
-
-Jopaul K Joshy
-🔗 Portfolio: https://portfolio-kuf9.onrender.com
-🔗 LinkedIn: https://www.linkedin.com/in/jopaul-k-joshy-75a7a6299
+⭐ Built as a learning project by **Jopaul K Joshy**
