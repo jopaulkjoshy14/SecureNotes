@@ -26,26 +26,7 @@ All notes are encrypted in the browser before being stored, ensuring that sensit
 
 ## 📁 Project Structure
 
-SecureNotes/
-│
-├── index.html        # Login page
-├── notes.html        # Notes interface
-│
-├── css/
-│ 
-└── styles.css        # UI styling
-│
-├── js/
-│  
-├── crypto.js         # Encryption & decryption logic
-│  
-├── storage.js        # Encrypted LocalStorage handling
-│  
-├── login.js          # Password handling & key derivation 
-│   
-└── notes.js          # Notes CRUD functionality 
-│ 
-└── assets/               # Images / icons
+SecureNotes/ │ ├── index.html            # Login page ├── notes.html            # Notes interface │ ├── css/ │   └── styles.css        # UI styling │ ├── js/ │   ├── crypto.js         # Encryption & decryption logic │   ├── storage.js        # Encrypted LocalStorage handling │   ├── login.js          # Password handling & key derivation │   └── notes.js          # Notes CRUD functionality │ └── assets/               # Images / icons
 
 ---
 
@@ -87,7 +68,28 @@ Live URL:
 
 ## 📸 Screenshots
 
-Example:
-
 ![Login Page](assets/login.png)
 ![Notes Interface](assets/notes.png)
+
+---
+
+## 🧭 Roadmap
+
+Export / Import encrypted notes
+Search functionality inside notes
+UI and accessibility improvements
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute it with attribution.
+
+---
+
+## 👤 Author
+
+Jopaul K Joshy
+🔗 Portfolio: https://portfolio-kuf9.onrender.com
+🔗 LinkedIn: https://www.linkedin.com/in/jopaul-k-joshy-75a7a6299
