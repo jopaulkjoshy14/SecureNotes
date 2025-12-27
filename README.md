@@ -26,7 +26,26 @@ All notes are encrypted in the browser before being stored, ensuring that sensit
 
 ## 📁 Project Structure
 
-SecureNotes/ │ ├── index.html            # Login page ├── notes.html            # Notes interface │ ├── css/ │   └── styles.css        # UI styling │ ├── js/ │   ├── crypto.js         # Encryption & decryption logic │   ├── storage.js        # Encrypted LocalStorage handling │   ├── login.js          # Password handling & key derivation │   └── notes.js          # Notes CRUD functionality │ └── assets/               # Images / icons
+SecureNotes/ 
+│ 
+├── index.html            # Login page
+├── notes.html            # Notes interface 
+│ 
+├── css/ 
+│   
+└── styles.css        # UI styling 
+│ 
+├── js/ 
+│   
+├── crypto.js         # Encryption & decryption logic 
+│   
+├── storage.js        # Encrypted LocalStorage handling 
+│   
+├── login.js          # Password handling & key derivation 
+│   
+└── notes.js          # Notes CRUD functionality 
+│ 
+└── assets/               # Images / icons
 
 ---
 
