@@ -28,24 +28,24 @@ All notes are encrypted in the browser before being stored, ensuring that sensit
 
 SecureNotes/ 
 │ 
-├── index.html            # Login page
-├── notes.html            # Notes interface 
+├── index.html
+├── notes.html    
 │ 
 ├── css/ 
 │   
-└── styles.css        # UI styling 
+└── styles.css     
 │ 
 ├── js/ 
 │   
-├── crypto.js         # Encryption & decryption logic 
+├── crypto.js   
 │   
-├── storage.js        # Encrypted LocalStorage handling 
+├── storage.js      
 │   
-├── login.js          # Password handling & key derivation 
+├── login.js        
 │   
-└── notes.js          # Notes CRUD functionality 
+└── notes.js         
 │ 
-└── assets/               # Images / icons
+└── assets/   
 
 ---
 
