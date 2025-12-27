@@ -1,3 +1,5 @@
+![SecureNotes Screenshot](./assets/login.png)
+![SecureNotes Screenshot](./assets/notes.png)
 # SecureNotes
 
 A privacy-focused notes application built to practice client-side encryption, secure data handling, and clean frontend architecture using modern browser APIs.
