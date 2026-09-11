@@ -3,45 +3,127 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>SecureNotes — Setup</title>
+  <meta name="description" content="SecureNotes — A private, offline-first notes application.">
+  <title>SecureNotes — Private Notes</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header>
-    SecureNotes (Offline) <span class="lock" id="lockStatus">🔒 Setup</span>
+<body class="auth-page">
+
+  <header class="app-header">
+    <a href="index.html" class="brand" aria-label="SecureNotes home">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">SecureNotes</span>
+    </a>
+
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="about.html" class="nav-link">About</a>
+      <span class="lock-status" id="lockStatus">🔒 Setup</span>
+    </nav>
   </header>
 
-  <div class="container">
-    <!-- First time setup -->
-    <div class="card" id="firstUse">
-      <div class="small">
-        First time? Create a master password (remember it — there is no recovery).
+  <main class="auth-main">
+    <section class="auth-intro">
+      <span class="eyebrow">PRIVATE. SIMPLE. OFFLINE.</span>
+
+      <h1>Your thoughts,<br><span>kept private.</span></h1>
+
+      <p class="auth-description">
+        A simple, secure place for your notes.
+        Your data stays on your device.
+      </p>
+    </section>
+
+    <section class="auth-card" aria-label="SecureNotes setup">
+
+      <!-- First time setup -->
+      <div id="firstUse">
+        <div class="card-heading">
+          <span class="card-icon">🔐</span>
+          <div>
+            <h2>Create your master password</h2>
+            <p>Set up your private notes space.</p>
+          </div>
+        </div>
+
+        <div class="notice notice-warning">
+          <span class="notice-icon">!</span>
+          <p>
+            Remember this password. There is no recovery option.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="newPwd">Master password</label>
+          <input
+            id="newPwd"
+            type="password"
+            placeholder="Enter your master password"
+            autocomplete="new-password"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="newPwd2">Confirm password</label>
+          <input
+            id="newPwd2"
+            type="password"
+            placeholder="Re-enter your master password"
+            autocomplete="new-password"
+          />
+        </div>
+
+        <button class="btn btn-primary btn-full" id="createBtn">
+          Create secure space
+          <span aria-hidden="true">→</span>
+        </button>
       </div>
-      <input id="newPwd" type="password" placeholder="Enter master password"/>
-      <input id="newPwd2" type="password" placeholder="Confirm password"/>
-      <div style="margin-top:8px">
-        <button class="btn" id="createBtn">Create</button>
+
+      <!-- Returning user options -->
+      <div class="hidden" id="returningUser">
+        <div class="card-heading">
+          <span class="card-icon">🔓</span>
+          <div>
+            <h2>Welcome back</h2>
+            <p>Your secure notes space already exists.</p>
+          </div>
+        </div>
+
+        <div class="notice notice-info">
+          <span class="notice-icon">i</span>
+          <p>
+            Continue to your notes or reset the local application.
+          </p>
+        </div>
+
+        <div class="button-stack">
+          <button class="btn btn-primary btn-full" id="proceedBtn">
+            Proceed to Notes
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <button class="btn btn-secondary btn-full" id="wipeBtn">
+            Factory Reset
+          </button>
+        </div>
       </div>
-    </div>
 
-    <!-- Returning user options -->
-    <div class="card hidden" id="returningUser">
-      <div class="small">A master password already exists. Choose an option:</div>
-      <div style="margin-top:8px; display:flex; gap:8px;">
-        <button class="btn" id="proceedBtn">Proceed to Notes</button>
-        <button class="btn secondary" id="wipeBtn">Factory Reset</button>
+      <div class="security-summary">
+        <span class="security-summary-icon">🛡️</span>
+        <div>
+          <strong>Designed for local privacy</strong>
+          <p>Your notes are encrypted before being stored locally.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card small">
-      <b>Security notes:</b> Master password is used to derive the encryption key. 
-      Salt is stored locally. Do not forget your password — there's no recovery.
-    </div>
+    </section>
+  </main>
 
-    <footer>Made for phone demo • Save page to home screen for app-like behavior</footer>
-  </div>
+  <footer class="app-footer">
+    <span>SecureNotes</span>
+    <span class="footer-dot">•</span>
+    <span>Private notes, made simple.</span>
+  </footer>
 
-  <!-- Scripts -->
   <script src="js/crypto.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/login.js"></script>
