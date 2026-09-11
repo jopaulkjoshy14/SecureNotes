@@ -72,9 +72,6 @@ SecureNotes/
 ├── index.html
 ├── notes.html
 ├── about.html
-├── .gitattributes
-├── .gitignore
-├── LICENSE
 └── README.md
 ```
 
