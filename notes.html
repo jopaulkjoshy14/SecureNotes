@@ -3,49 +3,133 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>SecureNotes — Notes</title>
+  <meta name="description" content="SecureNotes — Your private, encrypted notes workspace.">
+  <title>SecureNotes — My Notes</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header>
-    SecureNotes (Offline) <span class="lock">🔓 Unlocked</span>
+<body class="notes-page">
+
+  <header class="app-header">
+    <a href="notes.html" class="brand" aria-label="SecureNotes notes">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">SecureNotes</span>
+    </a>
+
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="about.html" class="nav-link">About</a>
+      <span class="lock-status">🔓 Unlocked</span>
+      <button class="btn btn-secondary header-lock-btn" id="lockBtn">
+        Lock
+      </button>
+    </nav>
   </header>
 
-  <div class="container" id="appUI">
-    <div class="card row">
-      <div style="flex:1">
-        <input id="noteTitle" placeholder="Note title"/>
-        <textarea id="noteContent" placeholder="Start typing your secure note..."></textarea>
+  <main class="notes-main" id="appUI">
+
+    <div class="notes-heading">
+      <div>
+        <span class="eyebrow">YOUR PRIVATE WORKSPACE</span>
+        <h1>Your Notes</h1>
+        <p>Write, organize, and keep your thoughts private.</p>
       </div>
-      <div style="width:180px">
-        <div style="margin-bottom:8px">
-          <button class="btn" id="saveNoteBtn">Save Note</button>
-        </div>
-        <div style="margin-bottom:8px">
-          <button class="btn secondary" id="lockBtn">Lock</button>
-        </div>
-        <div style="margin-bottom:8px">
-          <button class="btn secondary" onclick="resetEditor()">Reset</button>
-        </div>
-        <div class="small">Search:</div>
-        <input id="searchBox" placeholder="Search decrypted titles..."/>
+
+      <div class="notes-heading-status">
+        <span class="status-dot"></span>
+        <span>Local &amp; encrypted</span>
       </div>
     </div>
 
-    <div class="card">
-      <div class="row" style="justify-content:space-between;align-items:center">
-        <div><strong>Your Notes</strong> <span class="small" id="noteCount"></span></div>
-        <div class="actions">
-          <button class="btn secondary" id="exportBtn">Export Encrypted</button>
-          <button class="btn secondary" id="importBtn">Import Encrypted</button>
+    <div class="notes-layout">
+
+      <!-- Notes list -->
+      <section class="notes-panel">
+        <div class="panel-header">
+          <div>
+            <h2>All Notes</h2>
+            <span class="small" id="noteCount"></span>
+          </div>
+
+          <button class="btn btn-secondary" onclick="resetEditor()">
+            + New Note
+          </button>
         </div>
-      </div>
-      <div id="notesList" style="margin-top:10px"></div>
+
+        <div class="search-wrapper">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="searchBox"
+            placeholder="Search decrypted titles..."
+            aria-label="Search notes"
+          />
+        </div>
+
+        <div class="notes-list" id="notesList"></div>
+
+        <div class="panel-actions">
+          <button class="btn btn-secondary" id="exportBtn">
+            Export Encrypted
+          </button>
+          <button class="btn btn-secondary" id="importBtn">
+            Import Encrypted
+          </button>
+        </div>
+      </section>
+
+      <!-- Editor -->
+      <section class="editor-panel">
+        <div class="panel-header editor-header">
+          <div>
+            <span class="eyebrow">NOTE EDITOR</span>
+            <h2>Capture a thought</h2>
+          </div>
+
+          <span class="editor-badge">🔒 Private</span>
+        </div>
+
+        <div class="editor-fields">
+          <div class="form-group">
+            <label for="noteTitle">Title</label>
+            <input
+              id="noteTitle"
+              placeholder="Give your note a title"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group editor-content-group">
+            <label for="noteContent">Content</label>
+            <textarea
+              id="noteContent"
+              placeholder="Start writing your secure note..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="editor-actions">
+          <button class="btn btn-primary" id="saveNoteBtn">
+            Save Note
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <button class="btn btn-secondary" onclick="resetEditor()">
+            Reset
+          </button>
+        </div>
+      </section>
+
     </div>
 
-    <!-- Auto-lock setting -->
-    <div class="card">
-      <label class="small">Auto-lock after:
+    <!-- Auto-lock settings -->
+    <section class="settings-panel">
+      <div class="settings-icon">⏱</div>
+
+      <div class="settings-content">
+        <h2>Auto-lock</h2>
+        <p>Automatically lock your notes after a period of inactivity.</p>
+      </div>
+
+      <label class="settings-select-label" for="autoLockSelect">
+        <span class="small">Lock after</span>
         <select id="autoLockSelect">
           <option value="60000">1 minute</option>
           <option value="120000" selected>2 minutes</option>
@@ -54,10 +138,15 @@
           <option value="0">Never</option>
         </select>
       </label>
-    </div>
+    </section>
 
-    <footer>Made for phone demo • Save page to home screen for app-like behavior</footer>
-  </div>
+  </main>
+
+  <footer class="app-footer">
+    <span>SecureNotes</span>
+    <span class="footer-dot">•</span>
+    <span>Private notes, made simple.</span>
+  </footer>
 
   <script src="js/crypto.js"></script>
   <script src="js/storage.js"></script>
