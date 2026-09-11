@@ -547,20 +547,123 @@ select:focus {
   font-size: 0.78rem;
 }
 
-.app-footer {
+/* =========================================================
+   About Page
+   ========================================================= */
+
+.about-main {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(55px, 8vw, 100px) 0 70px;
+  flex: 1;
+}
+
+.about-hero {
+  max-width: 720px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+}
+
+.about-hero p {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.about-card {
+  min-width: 0;
+  padding: 25px 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.about-card:hover {
+  border-color: #cbd8e8;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.about-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 13px;
+  background: var(--primary-soft);
+  font-size: 1.2rem;
+}
+
+.about-card h2 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.about-card p {
+  margin-bottom: 0;
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.about-security {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+  padding: 32px;
+  border: 1px solid #d8e5f7;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    135deg,
+    #f8fbff 0%,
+    #eef5ff 100%
+  );
+}
+
+.about-security .eyebrow {
+  margin-bottom: 10px;
+}
+
+.about-security h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+}
+
+.about-security p {
+  margin-bottom: 0;
+  color: #536783;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.about-actions {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 24px 20px;
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  text-align: center;
-}
-
-.footer-dot {
-  color: #c4ccd8;
+  gap: 12px;
+  margin-top: 34px;
 }
 
 /* =========================================================
@@ -870,6 +973,26 @@ select:focus {
 }
 
 /* =========================================================
+   Shared Footer
+   ========================================================= */
+
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 24px 20px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.footer-dot {
+  color: #c4ccd8;
+}
+
+/* =========================================================
    Responsive Layout
    ========================================================= */
 
@@ -885,6 +1008,10 @@ select:focus {
 
   .notes-main {
     width: min(100% - 32px, 1280px);
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -933,6 +1060,11 @@ select:focus {
   .editor-content-group textarea {
     min-height: 260px;
   }
+
+  .about-security {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -979,6 +1111,43 @@ select:focus {
   .auth-card {
     padding: 22px;
     border-radius: var(--radius-lg);
+  }
+
+  .about-main {
+    width: calc(100% - 32px);
+    padding: 45px 0 45px;
+  }
+
+  .about-hero {
+    margin-bottom: 34px;
+    text-align: left;
+  }
+
+  .about-hero p {
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .about-card {
+    padding: 22px;
+  }
+
+  .about-security {
+    padding: 24px;
+  }
+
+  .about-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .about-actions .btn {
+    width: 100%;
   }
 
   .notes-main {
