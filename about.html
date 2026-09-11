@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta
+    name="description"
+    content="Learn about SecureNotes, a private client-side encrypted notes application."
+  />
+  <title>SecureNotes — About</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-page">
+
+  <header class="app-header">
+    <a href="index.html" class="brand" aria-label="SecureNotes home">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">SecureNotes</span>
+    </a>
+
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="notes.html" class="nav-link">My Notes</a>
+    </nav>
+  </header>
+
+  <main class="about-main">
+
+    <section class="about-hero">
+      <span class="eyebrow">ABOUT SECURENOTES</span>
+
+      <h1>Your thoughts belong to you.</h1>
+
+      <p>
+        SecureNotes is a privacy-focused notes application designed to help
+        you write, organize, and protect personal thoughts without relying on
+        a traditional backend.
+      </p>
+    </section>
+
+    <section class="about-grid">
+
+      <article class="about-card">
+        <div class="about-card-icon">🔐</div>
+        <h2>Client-side encryption</h2>
+        <p>
+          Your notes are encrypted directly in the browser using the Web
+          Crypto API before they are stored.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <div class="about-card-icon">🛡️</div>
+        <h2>Private by design</h2>
+        <p>
+          SecureNotes does not require a server, account system, or remote
+          database to manage your notes.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <div class="about-card-icon">💻</div>
+        <h2>Works offline</h2>
+        <p>
+          Notes are stored locally in your browser, allowing the application
+          to work without an internet connection.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <div class="about-card-icon">⚙️</div>
+        <h2>Simple technology</h2>
+        <p>
+          The application is built using HTML, CSS, and vanilla JavaScript,
+          with no unnecessary frameworks or external services.
+        </p>
+      </article>
+
+    </section>
+
+    <section class="about-security">
+      <div>
+        <span class="eyebrow">SECURITY MODEL</span>
+        <h2>Designed to keep encryption close to you.</h2>
+      </div>
+
+      <p>
+        SecureNotes uses password-based key derivation and AES-GCM encryption
+        through the browser's Web Crypto API. The encryption key is kept in
+        memory while the application is unlocked and is not intentionally
+        stored as plaintext in browser storage.
+      </p>
+    </section>
+
+    <section class="about-actions">
+      <a href="index.html" class="btn btn-primary">
+        Get Started
+        <span aria-hidden="true">→</span>
+      </a>
+
+      <a href="notes.html" class="btn btn-secondary">
+        Open My Notes
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <span>SecureNotes</span>
+    <span class="footer-dot">•</span>
+    <span>Private notes, made simple.</span>
+  </footer>
+
+</body>
+</html>
